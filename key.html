@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            text-align: center;
+            font-size: 50px;
+        }
+        #key{
+            width: 1280px;
+            height: 100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        #key input{
+            width: 200px;
+            height: 50px;
+            background: none;
+            border: none;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5)inset;
+            text-indent: 5px;
+            font-size: 15px;
+            transition: box-shadow 0.3s ease-in;
+        }
+        #key input.on{
+            box-shadow: 0 0 20px rgba(34, 161, 17, 0.5)inset;
+        }
+
+    </style>
+</head>
+<body>
+        <h1>key event</h1>
+
+    <div id="key">
+       <input type="text">
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+
+         const
+            input = document.querySelector('input');
+
+            input.addEventListener('keyup', (e) => {
+                this.value = '';
+                if(input.value.length>=1){
+                    input.classList.add('on')
+                }
+                else {
+                    input.classList.remove('on')
+                }
+
+            });
+             
+
+    </script>
+</body>
+</html>
